@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    /* reset */
+    padding: 0;
+    margin: 0;
+}
+
+.box-adds{
+    padding: 8px 0;
+    background-color: white;
+    color: gray;
+    text-align: center;
+}
+
+nav{
+    background-color:pink;
+    padding: 4px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+    nav img{
+        width: 200px;
+    }
+
+    nav ul{
+        list-style: none;
+        /* display: inline-block; */
+        display: flex;
+    }
+
+    nav ul li{
+        margin-right: 14px;
+    }
+
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+    }
+
+/* box model --  width (ancho) - alto (height) - margin (margen) - padding (relleno) - border (borde) */
+
+header{
+    height: 600px;
+    background-image: url(../imgs/headers/header-home.jpg);
+    background-repeat: no-repeat;
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+}
+
+.intro{
+    background-color: pink;
+    height: auto;/* alto */
+    /*margin: 50px;  aplica para los 4 lados iguales */
+    /* margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px; */
+    margin: 20px auto;
+    /* padding: 20px; */
+    /* padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 20px; */
+    padding: 10px 30px;
+}
+
+    .intro p{
+        font-size: 20px;
+        color: gray;
+    }
+
+h1{
+    margin: 20px 0;
+    color: white;
+}
+
+h2{
+    margin-top: 40px;
+}
+
+main{
+    padding: 10px 30px;
+}
+
+h2,h3{
+    color: pink;
+}
+
+/* inicia index de productos destacados */
+.contenedor-productos{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+   .contenedor-productos figure{
+        width: 20%;
+   }
+
+   .contenedor-productos figure img{
+        width: 100%;
+        border-top-right-radius: 4px;
+        border-top-left-radius:4px ;
+   }
+
+   .contenedor-productos figure figcaption{
+    margin: 10px 0;
+    color:pink;
+    font-size: 20px;
+   }
+
+   .contenedor-productos figure p{
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: rgb(143, 139, 139);
+   }
+
+   .contenedor-productos figure a{
+    text-decoration: none;
+    color: white;
+    background-color: pink;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 10px;
+   }
+
+footer{
+    margin-top: 50px;
+    padding: 10px 30px;
+    background-color: pink;
+}
+
+    footer svg{
+        fill: rgb(89, 88, 89);
+        width: 100px;
+        height: 25px;
+    }
+
+.whatsapp{
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    width: 80px;
+}
+
+/* inicia pantalla de contacto */
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+form.contact{
+    border: dotted pink 2px ; 
+    border-right: solid 1px pink;
+    border-left: double 1px rgb(47, 173, 31);
+    border-top: red dotted 2px;
+    border-bottom: dashed 2px blue;
+    padding: 30px;
+    width: 50%;
+    background-color: rgb(248, 222, 226);
+}
+
+
+p.foo{
+    /* selecciona un p que tiene la clase foo */
+    /* <p class="foo">jjj</p> */
+}
+
+p .foo{
+    /* seleciona a un elemento que tiene la clase foo y es hijo de un p */
+    /* <p> <elemento class="foo"></elemento> </p> */
+}
+
+    form.contact label{
+        color: grey;
+        /* display */
+        display: block;
+        margin-bottom: 4px  
+    }
+
+    form.contact input{
+        margin-bottom: 20px;
+        width: 100%;
+        height: 30px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    form.contact textarea{
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* inicia promociones */
+.bg-pattern{
+    background-image: url(../imgs/backgrounds/double-bubble.webp);
+    background-repeat: repeat;
+}
+
+.promociones{
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    .promociones figure{
+        width: 24%;
+        margin-bottom: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0 20px;
+    }
+        .promociones figure img{
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .promociones figure label{
+            color: pink;
+            /* label es una etiqueta de linea pero la muestro como block */
+            display: block;
+            margin: 14px 0;
+        }
+        .promociones figure h2{
+            margin-bottom: 10px;
+        }
+        .promociones figure a{
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: 6px;
+            border-radius: 3px;
+        }
+        .promociones figure .text-line-through{
+            text-decoration: line-through;
+            color: inherit;
+            margin-bottom: -8px;
+        }
+
+/* TIENDA GRIDS */
+#tienda-sprays{
+    display: grid;
+    grid-template-columns: 20% repeat(2,1fr);
+    grid-template-rows: 80px repeat(3,300px);
+    grid-template-areas: 
+    "actions actions actions" 
+    "filters prod1 prod1"
+    "filters prod2 prod3"
+    "filters prod2 prod4 ";
+    gap: 5px;
+}
+    #tienda-sprays .buscador-box{
+        grid-area: actions;
+        position: static;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+        #tienda-sprays .buscador-box input{
+            border: none;
+            background-color: rgb(231, 231, 231);
+            border-radius: 3px;
+            padding: 8px 6px;
+        }
+        #tienda-sprays .buscador-box button{
+            background-color: deeppink;
+            border: none;
+            padding: 4px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        #tienda-sprays .buscador-box button:hover{
+            cursor: pointer;
+            background-color: pink;
+        }
+        #tienda-sprays .buscador-box button svg{
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+    #tienda-sprays .filtros{
+        grid-area: filters;
+    }
+        #tienda-sprays .filtros select{
+            border: none;
+            background-color: rgb(255, 255, 255);
+            color: deeppink;
+            padding: 4px 0;
+            font-size: 1.1em;
+        }
+        #tienda-sprays .filtros ul{
+            list-style: none;
+            margin-top: 10px;
+        }
+        #tienda-sprays .filtros ul a{
+            color: rgb(138, 138, 135);
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+        #tienda-sprays .filtros ul a:hover{
+            color: deeppink;
+        }
+
+    #tienda-sprays img{
+        width: 250px;
+    }
+
+    #tienda-sprays .prod-1{
+        grid-area: prod1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 50px;
+    }
+    #tienda-sprays .prod-1 p{
+        width: 60%;
+    }
+    #tienda-sprays .prod-2{
+        grid-area: prod2;
+    }
+    #tienda-sprays .prod-3{
+        grid-area: prod3;
+    }
+    #tienda-sprays .prod-4{
+        grid-area: prod4;
+    }
+    #tienda-sprays .bg-light{
+        background-color: rgb(212, 214, 215);
+    }
+    #tienda-sprays .prod-2,
+    #tienda-sprays .prod-3,
+    #tienda-sprays .prod-4{
+        display: flex;
+        flex-direction: column;
+        padding: 0 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* inicia pantalla about con BEM -- solo para selectores de clase*/
+.about{
+    background-color: rgb(240, 236, 236);
+    padding: 20px 50px;
+}
+    .about__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .about__heading--xl{
+        font-size: 3em;
+        color: pink;
+    }
+    .about__text--regular{
+        font-weight: 400;
+        font-size: 1.1em;
+        color: gray;
+        margin: 0 10px;
+    }
+    .about__img--fluid{
+        width: 300px;
+    }
+    .about__btn--sm{
+        width: 200px;
+        height: 20px;
+        text-align: center;
+        padding: 4px 6px;
+        background-color: pink;
+        border-radius: 4px;
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+    .about__box--reverse{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .about__heading--lg{
+        font-size:2.2em;
+        color: pink;
+    }
+    .about__text--light{
+        font-weight: 300;
+    }
+
+/* camel case -- selectores de clase / selectores de ID */
+.boxReverse{
+    /* esto es camelCase */
+}
+
+#textBold{
+    /* esto es un ID en camelCase */
+}
+
+/* kebab - usa guion en el medio */
+.text-center{
+    /* kebab la usa bootstrap  */
+}
+
+/* snake tail */
+.text_center{
+
+}
+
+.headerMkt{
+    background-image: url(../imgs/headers/header-home.jpg);
+    height: 30vh;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .headerMkt button{
+        background-color: red;
+        color: white;
+        padding: 6px;
+    }
+
+    /* inicia responsive */
+
+    @media (width < 1025px){
+        .contenedor-productos figure{
+            width: 49%;
+            margin-bottom: 30px;
+            
+        }
+        .contenedor-productos figure a{
+            display: block;
+            width: 95%;
+            text-align: center;
+
+        }
+
+        /* sprays */
+        #tiend-sprays .buscador-box{
+         justify-content: flex-start;
+         transform: translateX(-21px);
+         
+        }
+
+        /* promos */
+        header{
+            height: 400px;
+
+        }
+
+        .promociones figure{
+            width: 49%;
+            margin-bottom: 30px;
+
+        }
+
+        .promociones figure a{
+            display: block;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        /* nosotros */
+
+        .headerMkt button{
+            display: none;
+
+        }
+
+        .about__box{
+            flex-direction: column;
+
+        }
+
+        .about__box img[src="../imgs/difusores/disufor-aromatico-coleccion-ambar.jpeg"]{
+
+            display: none;
+        
+        }
+        .about__box--reverse{
+            flex-direction: column;
+        }
+
+        .about__img--fluid{
+            width: 100%;
+
+        }
+
+        /* contacto */
+        form.contact{
+            border: none;
+            width: 90%;
+            margin: auto;
+        }
+        
+
+        .contacto{
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        form.contact area{
+            width: 85%;
+        }
+    }
+
+    /* ends 1024px */
+
+    @media (width < 769px){
+        nav{
+            flex-direction: column;
+            padding: 10px 20px;
+
+        }
+
+        footer div{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* index */
+
+        h1{
+            font-size: 1.4em;
+        }
+
+        h2{
+            font-size: 2.1em;
+        }
+
+        .contenedor-productos figure{
+            width: 100%;
+        }
+
+        .contenedor-productos figure p{
+            font-size: 1.4em;
+            line-height: 1.5em;
+        }
+
+        .contenedor-productos figure figcaption{
+            font-size: 2em;
+        }
+
+        .contenedor-productos figure figcaption a{
+            font-size: 1.4em;
+        }
+
+        .intro{
+            padding: 30px;
+
+        }
+
+        /* productos */
+
+        #tienda-sprays .filtros{
+            display: none;
+
+        }
+
+        #tienda-sprays{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "actions" "prod1" "prod2"
+            "prod3" "prod4";
+        }
+        #tienda-sprays .prod-1{
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        #tienda-sprays .prod-1 p
+        #tienda-sprays .prod-2{
+            width: 90%;
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        #tienda-sprays .prod-2{
+            padding: 30px;
+        }
+
+        main{
+            padding: 10px 0;
+        }
+        #tienda-sprays .buscador-box input{
+            width: 500px;
+            margin: auto;
+            display: block;
+        }
+        
+        #tienda-sprays .buscador-box{
+            transform: none;
+            display: flex;
+             
+        }
+    }
+    /* ends 768px */
+
+
+
+        
+
+
+
+    
+    
+
+    
